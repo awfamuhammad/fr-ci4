@@ -11,9 +11,8 @@ class Pages extends BaseController
             'title' => 'Selamat Datang di Website Kamil',
             'set' => ['satu', 'dua', 'tiga']
         ];
-        echo view('layout/header', $data);
-        echo view('Pages/home');
-        echo view('layout/footer');
+
+        return view('Pages/home', $data);
     }
 
     public function about() //ketika metodhnya dipanggil akan mengembalikan sebuah Folder "view"
@@ -22,9 +21,27 @@ class Pages extends BaseController
             'title' => 'Selamat Datang diAbout',
             'set' => ['satu', 'dua', 'tiga']
         ];
-        echo view('layout/header', $data);
-        echo view('Pages/about');
-        echo view('layout/footer');
+
+        return view('Pages/about', $data);
+    }
+
+    public function contact() //ketika metodhnya dipanggil akan mengembalikan sebuah Folder "view"
+    {
+        $data = [
+            'title' => 'Selamat Datang diContact',
+            'alamat' => [
+                'tipe' => 'Rumah',
+                'alamat' => 'Jl. Abc',
+                'kota' => 'Jakarta'
+            ],
+            [
+                'tipe' => 'Kantor',
+                'alamat' => 'Jl. CDe',
+                'kota' => 'Bandung'
+            ]
+        ];
+
+        return view('Pages/contact', $data);
     }
     //--------------------------------------------------------------------
 

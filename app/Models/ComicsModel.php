@@ -8,6 +8,7 @@ class ComicsModel extends Model
 {
     protected $table = 'comics';
     protected $useTimestamps = true;
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'sampul', 'created_at', 'updated_at'];
 
     public function getComics($slug = false)
     {

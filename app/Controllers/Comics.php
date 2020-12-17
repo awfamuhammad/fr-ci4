@@ -38,11 +38,42 @@ class Comics extends BaseController
     {
         $data = [
             'title' => 'Detail Komik',
-            'comic' => $this->comicsModel->getComics($slug)
+            'comics' => $this->comicsModel->getComics($slug)
         ];
+
+        // data not found
+        if (empty($data['comics'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data ' . $slug . ' tidak ditemulan');
+        }
         return view('comics/detail', $data);
     }
 
+    public function create()
+    {
+        $data = [
+            'title' => 'Form Tambah Komik',
+        ];
+
+        return view('comics/create', $data);
+    }
+
+    public function save()
+    {
+        // dd($this->request->getVar('judul'));
+        // inset to database
+        $slug = url_title($this->request->getVar('judul'), '-', true);
+        $this->comicsModel->save([
+            'judul' => $this->request->getVar('judul'),
+            'slug' => $slug,
+            'penulis' => $this->request->getVar('penulis'),
+            'penerbit' => $this->request->getVar('penerbit'),
+            'sampul' => $this->request->getVar('sampul')
+        ]);
+
+        session()->setFlashdata('Pesan', 'Data berhasil ditambahkan');
+
+        return redirect()->to('/comics');
+    }
     //--------------------------------------------------------------------
 
 }

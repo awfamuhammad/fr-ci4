@@ -7,13 +7,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="/img/<?= $comic['sampul']; ?>" width="100%" alt="...">
+                        <img src="/img/<?= $comics['sampul']; ?>" width="100%" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $comic['judul']; ?></h5>
-                            <p class="card-text"><b>Penulis:</b> <?= $comic['penulis']; ?></p>
-                            <p class="card-text"><small class="text-muted"><b>Penerbit:</b> <?= $comic['penerbit']; ?></small></p>
+                            <h5 class="card-title"><?= $comics['judul']; ?></h5>
+                            <p class="card-text"><b>Penulis:</b> <?= $comics['penulis']; ?></p>
+                            <p class="card-text"><small class="text-muted"><b>Penerbit:</b> <?= $comics['penerbit']; ?></small></p>
 
                             <a href="" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>

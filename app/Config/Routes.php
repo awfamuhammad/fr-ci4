@@ -33,8 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 //default yang akan ditampilak pada halaman utama
 $routes->get('/', 'Pages::index'); //CI akan membuat jalur ketika ada akese yang metode req get, alamatnya "/" arahkan controller ke Home dengan metdohnya index
-
+$routes->get('/comics/create', 'comics::create');
 $routes->get('/comics/(:segment)', 'comics::detail/$1');
+
 
 /**
  * --------------------------------------------------------------------

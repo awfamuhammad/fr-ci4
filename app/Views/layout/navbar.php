@@ -10,7 +10,7 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="/Pages/about">About</a> <!-- untuk xampp menggunakan base_url('/Pages/about') -->
                     <a class="nav-link" href="/Pages/contact">Contact us</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="/comics">Comics</a>
                 </div>
             </div>
         </div>

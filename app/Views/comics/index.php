@@ -20,7 +20,7 @@
                             <th scope="row"><?= $i++; ?></th>
                             <td><img src="/img/<?= $co['sampul']; ?>" alt="" class="cover"></td>
                             <td><?= $co['judul']; ?></td>
-                            <td><a href="" class="btn btn-success">Detail</td>
+                            <td><a href="/comics/<?= $co['slug']; ?>" class="btn btn-success">Detail</td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
